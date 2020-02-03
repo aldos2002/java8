@@ -32,11 +32,25 @@ public class Main {
         System.out.println(main.operate(10, 5, multiplication));
         System.out.println(main.operate(10, 5, division));
 
+        GreetingService greetingService1 = message -> System.out.println("Hello1 "+message);
+
+        String name = "Prakesh";
+        GreetingService greetingService2 = (message) -> {System.out.println("Hello2 "+message+" "+name);};
+
+
+        greetingService1.sayMessage("Mahesh");
+        greetingService2.sayMessage("Suresh");
+        greetingService2.sayMessage(name);
+
 
     }
 
     interface MathOperation {
         int operation(int a, int b);
+        default void operation2(int a, int b){
+            System.out.println("Bazinga!");
+        }
+
     }
 
     interface GreetingService {
