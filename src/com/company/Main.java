@@ -10,8 +10,8 @@ public class Main {
         Main main = new Main();
 
         Triangle triangle = new Triangle();
+        System.out.println(triangle.defaultProducer());
         System.out.println(triangle.useTheMethods());
-//        String s = MethodRefs::staticMethod;
         System.out.println(triangle.useTheOverwrittenMethods());
         System.out.println();
 
